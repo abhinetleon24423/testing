@@ -1,0 +1,16 @@
+<%- include('../partials/head', { title: 'Home - Sample Site' }) %>
+<%- include('../partials/header') %>
+
+<div class="container">
+  <h1 class="page-title">Welcome</h1>
+  <div class="card">
+    <p>This is the home page. Content and data from the server can be passed here.</p>
+    <% if (typeof users !== 'undefined' && users && users.length > 0) { %>
+      <p><strong><%= users.length %></strong> user(s) in the database.</p>
+    <% } else { %>
+      <p>No users yet.</p>
+    <% } %>
+  </div>
+</div>
+
+<%- include('../partials/footer') %>

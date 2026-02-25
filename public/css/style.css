@@ -1,0 +1,27 @@
+/* Sample Site – main styles */
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, -apple-system, sans-serif; line-height: 1.6; color: #1a1a1a; background: #f5f5f5; }
+
+.container { max-width: 960px; margin: 0 auto; padding: 0 1rem; }
+
+/* Header */
+.site-header { background: #1a1a2e; color: #eee; padding: 0.75rem 0; }
+.site-header .container { display: flex; align-items: center; justify-content: space-between; }
+.logo { font-weight: 700; font-size: 1.25rem; color: #fff; text-decoration: none; }
+.nav { display: flex; gap: 1.5rem; }
+.nav-link { color: #ccc; text-decoration: none; }
+.nav-link:hover { color: #fff; }
+.nav-link.active { color: #fff; font-weight: 600; }
+
+/* Main */
+.main { min-height: calc(100vh - 120px); padding: 2rem 0; }
+
+/* Footer */
+.site-footer { background: #1a1a2e; color: #888; padding: 1rem 0; text-align: center; font-size: 0.9rem; }
+.site-footer p { margin: 0; }
+
+/* Page content */
+.page-title { font-size: 1.75rem; margin-bottom: 1rem; color: #1a1a2e; }
+.card { background: #fff; border-radius: 8px; padding: 1.5rem; margin-bottom: 1rem; box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+.btn { display: inline-block; padding: 0.5rem 1rem; background: #1a1a2e; color: #fff; text-decoration: none; border-radius: 6px; border: none; cursor: pointer; }
+.btn:hover { opacity: 0.9; }

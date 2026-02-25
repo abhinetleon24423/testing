@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sample – How this project works</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.6; max-width: 720px; margin: 0 auto; padding: 1.5rem; color: #1a1a1a; background: #f8f9fa; }
+    h1 { font-size: 1.5rem; margin-top: 0; color: #0d6efd; }
+    h2 { font-size: 1.15rem; margin-top: 1.5rem; color: #333; border-bottom: 1px solid #dee2e6; padding-bottom: 0.25rem; }
+    code { background: #e9ecef; padding: 0.15em 0.4em; border-radius: 4px; font-size: 0.9em; }
+    pre { background: #2d2d2d; color: #f8f8f2; padding: 1rem; border-radius: 8px; overflow-x: auto; font-size: 0.85rem; }
+    pre code { background: none; padding: 0; color: inherit; }
+    .flow { list-style: none; padding-left: 0; }
+    .flow li { padding: 0.35rem 0; padding-left: 1.5rem; position: relative; }
+    .flow li::before { content: "→"; position: absolute; left: 0; color: #0d6efd; font-weight: bold; }
+    .card { background: #fff; border-radius: 8px; padding: 1.25rem; margin: 1rem 0; box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+    label { display: block; margin-bottom: 0.25rem; font-weight: 500; }
+    input[type="text"], input[type="email"] { width: 100%; padding: 0.5rem; border: 1px solid #ced4da; border-radius: 6px; margin-bottom: 0.75rem; }
+    button { background: #0d6efd; color: #fff; border: none; padding: 0.5rem 1rem; border-radius: 6px; cursor: pointer; font-size: 0.9rem; }
+    button:hover { background: #0b5ed7; }
+    button.danger { background: #dc3545; }
+    button.danger:hover { background: #bb2d3b; }
+    button.small { padding: 0.25rem 0.5rem; font-size: 0.8rem; }
+    #userList { margin-top: 1rem; }
+    .user-item { display: flex; align-items: center; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid #eee; }
+    .user-item:last-child { border-bottom: none; }
+    .msg { margin-top: 0.75rem; padding: 0.5rem; border-radius: 6px; font-size: 0.9rem; }
+    .msg.success { background: #d1e7dd; color: #0f5132; }
+    .msg.error { background: #f8d7da; color: #842029; }
+    .endpoint { margin: 0.5rem 0; }
+    .endpoint code { background: #e7f1ff; }
+  </style>
+</head>
+<body>
+  <h1>Sample page – How this project works</h1>
+
+  <section class="card">
+    <h2>1. Request flow</h2>
+    <p>When you call an API (e.g. <code>POST /users</code>), the request goes through:</p>
+    <ul class="flow">
+      <li><strong>Route</strong> (<code>routes/web.js</code>) – matches URL and method</li>
+      <li><strong>Middleware</strong> (optional) – e.g. <code>AuthMiddleware</code> for protected routes</li>
+      <li><strong>Controller</strong> (<code>UserController</code>) – handles request, calls Service</li>
+      <li><strong>Service</strong> (<code>UserService</code>) – business logic, uses Model</li>
+      <li><strong>Model</strong> (<code>User</code>) – Mongoose model, talks to MongoDB</li>
+      <li><strong>Response</strong> – <code>ApiResponse</code> helper sends JSON back</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>2. API endpoints</h2>
+    <div class="endpoint"><code>GET  /users</code> – List all users</div>
+    <div class="endpoint"><code>GET  /users/:id</code> – Get one user</div>
+    <div class="endpoint"><code>POST /users</code> – Create user (body: name, email)</div>
+    <div class="endpoint"><code>PUT  /users/:id</code> – Update user</div>
+    <div class="endpoint"><code>DELETE /users/:id</code> – Delete user (requires <code>Authorization</code> header)</div>
+  </section>
+
+  <section class="card">
+    <h2>3. Try it</h2>
+    <p>Create a user and see it in the list below (data is stored in MongoDB).</p>
+    <form id="createForm">
+      <label>Name</label>
+      <input type="text" name="name" placeholder="John Doe" required>
+      <label>Email</label>
+      <input type="email" name="email" placeholder="john@example.com" required>
+      <button type="submit">Create user</button>
+    </form>
+    <div id="formMsg"></div>
+    <p><strong>Users in database:</strong> <button type="button" class="small" onclick="loadUsers()">Refresh</button></p>
+    <div id="userList">Loading…</div>
+  </section>
+
+  <script>
+    const formMsg = document.getElementById('formMsg');
+    const userList = document.getElementById('userList');
+
+    async function parseJson(res) {
+      const text = await res.text();
+      if (text.trim().startsWith('<')) throw new Error('Server returned a page instead of data. Check the URL.');
+      try { return JSON.parse(text); } catch (e) { throw new Error('Invalid response from server'); }
+    }
+
+    document.getElementById('createForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const form = e.target;
+      const body = { name: form.name.value.trim(), email: form.email.value.trim().toLowerCase() };
+      formMsg.textContent = '';
+      try {
+        const res = await fetch('/users', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
+        const data = await parseJson(res);
+        if (!res.ok) throw new Error(data.message || 'Request failed');
+        formMsg.className = 'msg success';
+        formMsg.textContent = 'User created: ' + (data.data.name || data.data.email);
+        form.reset();
+        loadUsers();
+      } catch (err) {
+        formMsg.className = 'msg error';
+        formMsg.textContent = err.message;
+      }
+    });
+
+    async function loadUsers() {
+      userList.textContent = 'Loading…';
+      try {
+        const res = await fetch('/users');
+        const data = await parseJson(res);
+        if (!res.ok) throw new Error(data.message || 'Request failed');
+        renderUserList(data.data || []);
+      } catch (err) {
+        userList.innerHTML = '<span class="msg error">' + escapeHtml(err.message) + '</span>';
+      }
+    }
+
+    async function deleteUser(id) {
+      if (!confirm('Delete this user?')) return;
+      try {
+        const res = await fetch('/users/' + id, { method: 'DELETE', headers: { 'Authorization': 'Bearer demo-token' } });
+        const data = await parseJson(res);
+        if (!res.ok) throw new Error(data.message || 'Delete failed');
+        loadUsers();
+      } catch (err) {
+        alert(err.message);
+      }
+    }
+
+    function escapeHtml(s) {
+      const div = document.createElement('div');
+      div.textContent = s;
+      return div.innerHTML;
+    }
+
+    function renderUserList(users) {
+      if (!users || users.length === 0) {
+        userList.innerHTML = '<em>No users yet. Create one above.</em>';
+        return;
+      }
+      userList.innerHTML = users.map(u => `
+        <div class="user-item" data-id="${u._id}">
+          <span><strong>${escapeHtml(u.name)}</strong> – ${escapeHtml(u.email)}</span>
+          <button type="button" class="small danger" onclick="deleteUser('${u._id}')">Delete</button>
+        </div>
+      `).join('');
+    }
+
+    const initialUsers = <%- JSON.stringify(typeof users !== 'undefined' ? users : []) %>;
+    if (initialUsers.length > 0) renderUserList(initialUsers);
+    else loadUsers();
+  </script>
+</body>
+</html>
