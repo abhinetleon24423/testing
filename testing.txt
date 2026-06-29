@@ -1,0 +1,570 @@
+Act as a Senior Product Manager, Stock Market Expert, UX Researcher, Business Analyst, and Startup Consultant.
+
+Main India ke liye ek AI-powered Stock Market Intelligence Platform banana chahta hu.
+
+Meri problem ye hai ki mujhe stock market ki deep knowledge nahi hai. Mujhe website banani hai jo beginners se lekar professional traders aur investors sabke liye valuable ho.
+
+Main koi normal stock screener ya news website nahi banana chahta.
+
+Mera goal hai ki jab user website par aaye to usko har visit par kuch naya seekhne ko mile aur uski trading ya investing decision better ho.
+
+Mujhe ek complete research document create karke do.
+
+Research sirf surface level nahi honi chahiye. Deep research karo.
+
+Explore 500-1000+ Indian stock market related websites, blogs, YouTube channels, trading communities, investor platforms, broker apps, AI tools, screeners, newsletters, Reddit discussions, Twitter/X influencers, Quora discussions, finance communities aur jo bhi relevant sources ho.
+
+Research ke time following categories cover karo:
+
+----------------------------------------------------
+
+PART 1
+Current Indian Stock Market Ecosystem
+
+- India me kaun kaun se stock market platforms exist karte hain
+- Kis category ki websites hain
+- Kis problem ko solve karti hain
+- Kis audience ko target karti hain
+- Kis platform ke kitne active users hain (approx)
+- Revenue model
+- Strengths
+- Weaknesses
+- Missing opportunities
+
+----------------------------------------------------
+
+PART 2
+Competitor Analysis
+
+Top competitors ka detailed analysis:
+
+Zerodha
+Groww
+Angel One
+Upstox
+Moneycontrol
+Trendlyne
+Screener.in
+Tickertape
+StockEdge
+Value Research
+ET Markets
+Economic Times
+TradingView
+Investing.com
+TickerTape
+MarketSmith India
+Ticker by Finology
+Smallcase
+
+Aur jitne relevant competitors ho sab include karo.
+
+Har competitor ke liye:
+
+Features
+
+UI
+
+UX
+
+Business Model
+
+Premium Features
+
+Missing Features
+
+User Complaints
+
+Reviews
+
+Common Pain Points
+
+----------------------------------------------------
+
+PART 3
+
+Research from real users
+
+Explore:
+
+Reddit
+
+Quora
+
+Twitter/X
+
+Google Reviews
+
+Play Store Reviews
+
+App Store Reviews
+
+YouTube Comments
+
+Discord
+
+Telegram
+
+Trading communities
+
+Find:
+
+Users kis cheez se frustrated hain
+
+Kis feature ki demand hai
+
+Log kis problem ka solution nahi paa rahe
+
+Users daily kya search karte hain
+
+Beginners ko kya problem hoti hai
+
+Professionals ko kya problem hoti hai
+
+----------------------------------------------------
+
+PART 4
+
+Beginner Journey
+
+Agar koi user stock market ke baare me zero knowledge rakhta hai.
+
+Uska complete learning journey design karo.
+
+Example:
+
+What is Stock Market
+
+Demat Account
+
+Trading
+
+Investing
+
+IPO
+
+Mutual Funds
+
+Options
+
+Futures
+
+Technical Analysis
+
+Fundamental Analysis
+
+Risk Management
+
+Portfolio
+
+Psychology
+
+Advanced Concepts
+
+Har stage par website uski kaise help karegi.
+
+----------------------------------------------------
+
+PART 5
+
+Professional Trader Journey
+
+Experienced traders ke liye:
+
+Daily workflow
+
+Research workflow
+
+Morning preparation
+
+Intraday tools
+
+Swing trading
+
+Position trading
+
+Portfolio tracking
+
+Risk management
+
+AI insights
+
+Earnings analysis
+
+News analysis
+
+Sector analysis
+
+Market sentiment
+
+Institutional activity
+
+FII DII
+
+Bulk Deals
+
+Block Deals
+
+Insider Trading
+
+Corporate Actions
+
+Calendar
+
+Alerts
+
+Watchlists
+
+AI assistant
+
+----------------------------------------------------
+
+PART 6
+
+Feature Brainstorming
+
+Traditional features
+
+Unique features
+
+AI features
+
+Future features
+
+Generate at least:
+
+300+ website feature ideas.
+
+Features ko categorize karo:
+
+Must Have
+
+Good to Have
+
+Premium
+
+AI Powered
+
+Future Vision
+
+----------------------------------------------------
+
+PART 7
+
+Content Strategy
+
+Website par kis type ka content hona chahiye.
+
+Learning Hub
+
+News
+
+AI Summary
+
+Daily Reports
+
+Weekly Reports
+
+Market Analysis
+
+Stock Analysis
+
+Sector Analysis
+
+IPO Analysis
+
+Earnings Analysis
+
+Case Studies
+
+Courses
+
+Community
+
+Glossary
+
+Knowledge Base
+
+----------------------------------------------------
+
+PART 8
+
+Homepage Research
+
+Research karo duniya ke best financial websites.
+
+Bloomberg
+
+Yahoo Finance
+
+TradingView
+
+MarketWatch
+
+Morningstar
+
+Seeking Alpha
+
+Finviz
+
+Trading Economics
+
+Moneycontrol
+
+Aur jitni relevant websites ho.
+
+Unke homepage analyze karo.
+
+Best sections identify karo.
+
+Missing sections identify karo.
+
+Suggest ek world-class homepage.
+
+----------------------------------------------------
+
+PART 9
+
+User Personas
+
+Create detailed personas.
+
+Beginner
+
+Student
+
+Long Term Investor
+
+Swing Trader
+
+Intraday Trader
+
+Option Trader
+
+Professional Investor
+
+Financial Advisor
+
+Institutional Research Analyst
+
+Har persona ke goals aur pain points explain karo.
+
+----------------------------------------------------
+
+PART 10
+
+Product Roadmap
+
+MVP
+
+V1
+
+V2
+
+V3
+
+V4
+
+Future Vision
+
+Har version me kya features hone chahiye.
+
+----------------------------------------------------
+
+PART 11
+
+Database Planning
+
+Website ke liye required database entities identify karo.
+
+Stocks
+
+Companies
+
+News
+
+Press Releases
+
+Financial Statements
+
+Corporate Actions
+
+Dividends
+
+Splits
+
+Earnings
+
+Economic Calendar
+
+IPO
+
+Mutual Funds
+
+ETF
+
+Users
+
+Portfolios
+
+Alerts
+
+Watchlists
+
+AI Analysis
+
+Reports
+
+etc.
+
+----------------------------------------------------
+
+PART 12
+
+AI Opportunities
+
+AI website ko kaise powerful bana sakta hai.
+
+Examples:
+
+AI News Summary
+
+AI Earnings Summary
+
+AI Press Release Summary
+
+AI Risk Score
+
+AI Portfolio Review
+
+AI Trade Journal
+
+AI Chat Assistant
+
+AI Learning Coach
+
+AI Stock Comparison
+
+AI Market Sentiment
+
+AI Research Reports
+
+Aur naye innovative ideas.
+
+----------------------------------------------------
+
+PART 13
+
+Monetization
+
+Free Model
+
+Premium Subscription
+
+Enterprise
+
+Broker Partnerships
+
+API
+
+Ads
+
+Research Reports
+
+Courses
+
+Newsletter
+
+----------------------------------------------------
+
+PART 14
+
+UX Research
+
+Website ka navigation design karo.
+
+Information Architecture.
+
+Dashboard.
+
+Stock Detail Page.
+
+Sector Page.
+
+News Page.
+
+Learning Hub.
+
+Search Experience.
+
+Mobile Experience.
+
+----------------------------------------------------
+
+PART 15
+
+Gap Analysis
+
+Sab competitors ko compare karke batao:
+
+Market me kya missing hai.
+
+Kaunsi problems abhi tak solve nahi hui.
+
+Kaunsi opportunities future me hain.
+
+Agar mujhe ek billion-dollar product banana ho to mujhe kis direction me jana chahiye.
+
+----------------------------------------------------
+
+FINAL OUTPUT
+
+Create a professional Product Requirement Document (PRD).
+
+Include:
+
+Executive Summary
+
+Research Summary
+
+Market Analysis
+
+Competitor Analysis
+
+User Personas
+
+Problem Statements
+
+Opportunities
+
+Feature List
+
+Feature Priority
+
+Information Architecture
+
+User Flow
+
+Database Planning
+
+API Requirements
+
+AI Opportunities
+
+UI Suggestions
+
+Monetization
+
+Product Roadmap
+
+Success Metrics
+
+Technical Recommendations
+
+Future Expansion Plan
+
+The document should be detailed enough that a UI/UX designer, backend developer, frontend developer, AI engineer, and product manager can start building the platform directly.
+
+Think like a founder building the Bloomberg + TradingView + Tickertape + Moneycontrol + Perplexity + ChatGPT for Indian investors.
+
+Do not give generic answers. Every recommendation should explain WHY it matters, WHO it helps, WHAT problem it solves, and HOW it should work.
